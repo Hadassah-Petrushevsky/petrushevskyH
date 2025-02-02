@@ -124,13 +124,22 @@
       <div class="further-info">
         <!-- insert images with srcsets and sizes -->
         <a href="https://www.mozilla.org/en-US/firefox/new/">
-          <img src="../Images/firefox_logo-only_RGB400px.png" alt="firefox logo">
+          <img srcset="../Images/firefox_logo-only_RGB120px.png 120w, 
+            ../Images/firefox_logo-only_RGB400px.png 400w"
+            sizes="(max-width: 500px) 120px, 400px" 
+            src="../Images/firefox_logo-only_RGB400px.png" alt="firefox logo">
         </a>
         <a href="https://www.mozilla.org/">
-          <img src="../Images/mozilladinosaurhead400px.png" alt="dinosaur head">
+          <img srcset="../Images/mozilladinosaurhead120px.png 120w,
+            ../Images/mozilladinosaurhead400px.png 400w"
+            sizes="(max-width: 500px) 120px, 400px"
+            src="../Images/mozilladinosaurhead400px.png" alt="dinosaur head">
         </a>
         <a href="https://addons.mozilla.org/">
-          <img src="../Images/firefoxaddons400px.jpg" alt="firefoz addons">
+          <img srcset="../Images/firefoxaddons120px.jpg 120px,
+            ../Images/firefoxaddons400px.jpg 400px"
+            sizes="(max-width: 500px) 120px, 400px"
+            src="../Images/firefoxaddons400px.jpg" alt="firefoz addons">
         </a>
         <a href="https://developer.mozilla.org/en-US/">
           <img src="../Images/mdn.svg" alt="mdn">
