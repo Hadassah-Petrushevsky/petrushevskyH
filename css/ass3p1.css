@@ -46,6 +46,10 @@ body {
     padding: 2px;
   }
 
+  li{
+    list-style-position: inside;
+  }
+
   /** Question 5 **/
   a:hover{
     color: green;
