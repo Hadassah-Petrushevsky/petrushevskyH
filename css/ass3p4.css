@@ -49,3 +49,13 @@ body {
   .feature {
       width: 200px;
   }
+
+  /** New Rules **/
+  nav ul{
+    display: flex;
+    flex-direction: row;
+  }
+
+  nav ul li{
+    flex: 1;
+  }
