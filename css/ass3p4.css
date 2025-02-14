@@ -55,7 +55,10 @@ body {
     display: flex;
     flex-direction: row;
   }
-
   nav ul li{
     flex: 1;
+  }
+
+  article img{
+    float: left;
   }
