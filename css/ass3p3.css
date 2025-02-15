@@ -159,3 +159,42 @@
     padding: 15px 15px;
     white-space: nowrap;
   }
+
+  /*FONT*/
+
+  /* General setup */
+html {
+  font-size: 10px;
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  word-spacing: 0.6rem;
+}
+
+/* Typography */
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h1, h2 {
+  font-family: 'Serif', sans-serif;
+}
+
+p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  word-spacing: 0.6rem;
+  letter-spacing: 0.1rem;
+  font-family: 'Raleway', 'Times New Roman', Times, serif;
+}
