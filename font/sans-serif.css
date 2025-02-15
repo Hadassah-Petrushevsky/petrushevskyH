@@ -9,6 +9,8 @@ html {
     width: 80%;
     max-width: 800px;
     margin: 0 auto;
+    line-height: 1.6;
+    word-spacing: 0.6rem;
   }
   
   /* Typography */
