@@ -44,3 +44,58 @@
   
   /* WRITE YOUR CODE BELOW HERE */
   
+  header{
+    text-align: center;
+    letter-spacing: 0.5rem;
+  }
+
+  section > p:first-of-type{
+    text-indent: 20px;
+  }
+
+  section p a:visited{
+    color: #a66;
+  }
+  section p a:active{
+    color: slategrey;
+    font-style: italic;
+  }
+
+  a:active{
+    color:slategray;
+    font-style: italic;
+  }
+
+  a:visited{
+    color: #a66;
+  }
+  a:hover{
+    color: rgb(145, 92, 92);
+    text-decoration: none;
+  }
+  a:focus{
+    color: rgb(145, 92, 92);
+  }
+  
+  /** External Links Icon**/
+  a[href="https://en.wikipedia.org/wiki/Examination"]::after{
+    position: absolute;
+    content: ' ';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-left: 0.25em;
+    background-size: 100%;
+    background-image: url(../Images/external-link-52.png);
+  }
+
+  a[href="https://en.wikipedia.org/wiki/Jobs"]::after{
+    position: absolute;
+    content: ' ';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-left: 0.25em;
+    background-size: 100%;
+    background-image: url(../Images/external-link-52.png);
+  }
