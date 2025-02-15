@@ -43,6 +43,9 @@
   }
   
   /* WRITE YOUR CODE BELOW HERE */
+  h2{
+    white-space: nowrap;
+  }
   
   header{
     text-align: center;
@@ -98,4 +101,61 @@
     margin-left: 0.25em;
     background-size: 100%;
     background-image: url(../Images/external-link-52.png);
+  }
+
+  a[href="https://en.wikipedia.org/wiki/Career"]::after{
+    position: absolute;
+    content: ' ';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-left: 0.25em;
+    background-size: 100%;
+    background-image: url(../Images/external-link-52.png);
+  }
+
+  a[href="https://en.wikipedia.org/wiki/Emotion"]::after{
+    position: absolute;
+    content: ' ';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-left: 0.25em;
+    background-size: 100%;
+    background-image: url(../Images/external-link-52.png);
+  }
+
+  /** Lists **/
+  ul li{
+    line-height: 1.6;
+    margin: 0.6rem 0;
+  }
+  ul li a{
+    line-height: 1.6;
+    margin: 0.6rem 0;
+  }
+  ol li{
+    line-height: 1.6;
+    margin: 0.6rem 0;
+  }
+  ol li a{
+    line-height: 1.6;
+    margin: 0.6rem 0;
+  }
+
+  /** Nav **/
+  nav ul{
+    margin: 0;
+    padding: 0;
+    width: 60px;
+    list-style-type: none;
+    float: inline-end;
+  }
+
+  nav li a{
+    display: block;
+    text-decoration: none;
+    font-size: x-large;
+    padding: 15px 15px;
+    white-space: nowrap;
   }
