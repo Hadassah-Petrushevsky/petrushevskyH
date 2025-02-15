@@ -51,14 +51,34 @@ body {
   }
 
   /** New Rules **/
+  /**1**/
   nav ul{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
   }
   nav ul li{
     flex: 1;
   }
-
+  /**2**/
+  nav{
+    position: sticky;
+    top: 0;
+  }
+  /**3**/
   article img{
     float: left;
+  }
+
+  /**4**/
+  .grid{
+    display: flex;
+  }
+
+  /**5**/
+  .photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1px;
   }
