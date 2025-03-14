@@ -1,16 +1,8 @@
 // 1. COMPLETE VARIABLE AND FUNCTION DEFINITIONS
 
-function customName01(){
-    const customName = document.getElementById('#customname');
-}
-
-function randomizeStory(){
-    const randomize = document.querySelector('.randomize');
-}
-
-function selectStory(){
-    story = document.querySelector('.story');
-}
+const customName = document.getElementById('customname');
+const randomize = document.querySelector('.randomize');
+const story = document.querySelector('.story');
 
 function randomValueFromArray(array){
   const random = Math.floor(Math.random()*array.length);
@@ -19,19 +11,23 @@ function randomValueFromArray(array){
 
 // 2. RAW TEXT STRINGS
 
-// It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.
+let storyText = "It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.
 
-// Willy the Goblin
-// Big Daddy
-// Father Christmas
+Willy the Goblin
+Big Daddy
+Father Christmas
 
-// the soup kitchen
-// Disneyland
-// the White House
+the soup kitchen
+Disneyland
+the White House
 
-// spontaneously combusted
-// melted into a puddle on the sidewalk
-// turned into a slug and crawled away
+spontaneously combusted
+melted into a puddle on the sidewalk
+turned into a slug and crawled away"
+
+let insertx = ["Willy the Goblin", "Big Daddy", "Father Christmas"];
+let inserty = ["the soup kitchen", "Disneyland", "the White House"];
+let insertz = ["spontaneously combusted", "melted into a puddle on the sidewalk", "turned into a slug and crawled away"];
 
 //3. EVENT LISTENER AND PARTIAL FUNCTION DEFINITION
 
