@@ -7,6 +7,13 @@ const overlay = document.querySelector('.overlay');
 const imgArr = ["./imagesp2/pic1.jpg", "./imagesp2/2.jpg", "./imagesp2/pic3.jpg", "./imagesp2/pic4.jpg", "./imagesp2/pic5.jpg"];
 
 /* Declaring the alternative text for each image file */
+const imgAlts = [
+    {altText: "Photo 1 - Human Eye"},
+    {altText: "Photo 2 - Sky"},
+    {altText: "Photo 3 - Purple Flowers"},
+    {altText: "Photo 4 - Egypt Script"},
+    {altText: "Photo 5 - Butterfly"}
+  ];
 
 /* Looping through images */
 
