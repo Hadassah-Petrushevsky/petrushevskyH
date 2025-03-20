@@ -11,7 +11,7 @@ function randomValueFromArray(array){
 
 // 2. RAW TEXT STRINGS
 
-let storyText = "It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day. Willy the Goblin Big Daddy Father Christmas the soup kitchen Disneyland the White House spontaneously combusted melted into a puddle on the sidewalk turned into a slug and crawled away"
+let storyText = "It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day."
 
 let insertx = ["Willy the Goblin", "Big Daddy", "Father Christmas"];
 let inserty = ["the soup kitchen", "Disneyland", "the White House"];
@@ -29,9 +29,9 @@ function result() {
   let yitem = randomValueFromArray(inserty);
   let zitem = randomValueFromArray(insertz);
 
-  newStory = newStory.replaceAll('insertx', xitem);
-  newStory = newStory.replaceAll('inserty', yitem);
-  newStory = newStory.replaceAll('insertz', zitem);
+  newStory = newStory.replaceAll(':insertx:', xitem);
+  newStory = newStory.replaceAll(':inserty:', yitem);
+  newStory = newStory.replaceAll(':insertz:', zitem);
 
 
 
@@ -41,10 +41,10 @@ function result() {
   }
 
   if(document.getElementById("uk").checked) {
-    const weight = Math.round((300/0.0714286) + " Stone");
-    const temperature =  Math.round((94-32) * 5/9 + " Centigrade");
-    newStory = newStory.replace('300 pounds', weight);
-    newStory = newStory.replace('94 Fahrenheit', temperature);
+    const weight = `${Math.round(300/14)} Stone`;
+    const temperature =  `${Math.round(94-32) * (5/9)}Centigrade`;
+    newStory = newStory.replace("300 pounds", weight);
+    newStory = newStory.replace("94 Fahrenheit", temperature);
   }
 
   story.textContent = newStory;
