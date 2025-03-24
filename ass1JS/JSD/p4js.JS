@@ -116,6 +116,25 @@ class EvilCircle extends Shape{
 
 
 
+const evilCircle = new EvilCircle(50, 50);
+
+window.addEventListener("keydown", (e) => {
+  switch (e.key) {
+    case "a":
+      evilCircle.x -= evilCircle.velX;
+      break;
+    case "d":
+      evilCircle.x += evilCircle.velX;
+      break;
+    case "w":
+      evilCircle.y -= evilCircle.velY;
+      break;
+    case "s":
+      evilCircle.y += evilCircle.velY;
+      break;
+  }
+});
+
 function loop() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
