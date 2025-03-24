@@ -12,7 +12,7 @@ function random(min, max) {
 
 // function to generate random RGB color value
 function randomRGB() {
-  return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
+  return `rgb(${random(0, 255)}, ${random(0, 255)}, ${random(0, 255)})`;
 }
 
 // Class Shape
@@ -78,26 +78,12 @@ class Ball extends Shape{
 }
 
 // Evil Circle
-class EvilCircle extends Shape(x, y){
-  super(x, y, 20, 20);
-  this.size = 10;
-  this.color = "white";
-  window.addEventListener("keydown", (e) => {
-    switch (e.key) {
-      case "a":
-        this.x -= this.velX;
-        break;
-      case "d":
-        this.x += this.velX;
-        break;
-      case "w":
-        this.y -= this.velY;
-        break;
-      case "s":
-        this.y += this.velY;
-        break;
-    }
-  });
+class EvilCircle extends Shape{
+  constructor(x, y){
+    super(x, y, 20, 20);
+    this.size = 10;
+    this.color = "white";
+  }
 
   draw() {
     ctx.beginPath();
@@ -115,22 +101,20 @@ class EvilCircle extends Shape(x, y){
   }
 
   collisionDetect() {
-    balls.forEach(ball => {
-        if (ball.exists) {
-            const dx = this.x - ball.x;
-            const dy = this.y - ball.y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-            if (distance < this.size + ball.size) {
-                ball.exists = false;  // Ball has been eaten!
-            }
-        }
-    });
+    for (const ball of balls) {
+      if (!ball.exists) continue;
+      const dx = this.x - ball.x;
+      const dy = this.y - ball.y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+      if (distance < this.size + ball.size) {
+        ball.exists = false; // Ball is eaten
+        updateBallCount();
+      }
+    }
   }
-
 }
 
-const evilCircle = new EvilCircle(canvas.width / 2, canvas.height / 2);
-evilCircle.move();
+
 
 function loop() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -138,9 +122,9 @@ function loop() {
 
   for (const ball of balls) {
       if (ball.exists) {
-          ball.update();
-          ball.draw();
-          ball.collisionDetect();
+        ball.draw();
+        ball.update();
+        ball.collisionDetect();
       }
   }
 
