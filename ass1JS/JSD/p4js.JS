@@ -75,6 +75,40 @@ class Ball extends Shape{
       }
     }
   }
+}
+
+// Evil Circle
+class EvilCircle extends Shape(x, y){
+  super(x, y, 20, 20);
+  this.size = 10;
+  this.color = "white";
+  window.addEventListener("keydown", (e) => {
+    switch (e.key) {
+      case "a":
+        this.x -= this.velX;
+        break;
+      case "d":
+        this.x += this.velX;
+        break;
+      case "w":
+        this.y -= this.velY;
+        break;
+      case "s":
+        this.y += this.velY;
+        break;
+    }
+  });
+
+  draw() {
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+    ctx.strokeStyle = this.color;
+    ctx.lineWidth = 3;
+    ctx.stroke();
+  }
+
+  
+}
 
 const balls = [];
 
