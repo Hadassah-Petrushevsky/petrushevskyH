@@ -126,8 +126,8 @@ for (let i = 0; i < 30; i++) {
     random(0 + size, height - size),
     random(1, 7),
     random(1, 7),
-    size,
-    randomRGB()
+    randomRGB(),
+    size
   );
   balls.push(ball);
   ballCount++;
@@ -151,6 +151,11 @@ window.addEventListener("keydown", (e) => {
       break;
   }
 });
+
+function updateBallCount(){
+  ballCount = balls.filter((ball) => ball.exists).length;
+  ballCountDisplay.textContent = "Ball count: " + ballCount;
+}
 
 function loop() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
