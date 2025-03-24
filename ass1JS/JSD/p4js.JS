@@ -107,6 +107,13 @@ class EvilCircle extends Shape(x, y){
     ctx.stroke();
   }
 
+  checkBounds() {
+    if (this.x + this.size >= canvas.width) this.x = canvas.width - this.size;
+    if (this.x - this.size <= 0) this.x = this.size;
+    if (this.y + this.size >= canvas.height) this.y = canvas.height - this.size;
+    if (this.y - this.size <= 0) this.y = this.size;
+  }
+
   
 }
 
