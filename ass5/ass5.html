@@ -104,10 +104,10 @@
         </aside>
 
         <section class="comments">
-          <button class="show-hide">Show comments</button>
+          <div class="show-hide" tabindex="0" role="button" aria-expanded="false">Show comments</div>
           <div class="comment-wrapper">
             <h3 class="6">add comment</h3>
-            <form class="comment-form">
+            <form class="comment-form"> 
                 <div class="flex-pair">
                   <label for="name">Your name:</label>
                   <input type="text" name="name" id="name" placeholder="Enter your name">
@@ -117,7 +117,7 @@
                   <label for="comment">Your comment:</label>
                   <input type="text" name="comment" id="comment" placeholder="Enter your comment">
                 </div>
-                
+
                 <div>
                   <input type="submit" value="Submit comment">
                 </div>
