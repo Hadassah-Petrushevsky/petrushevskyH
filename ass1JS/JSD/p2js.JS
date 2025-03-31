@@ -13,7 +13,7 @@ const imgAlts = [
     {altText: "Photo 3 - Purple Flowers"},
     {altText: "Photo 4 - Egypt Script"},
     {altText: "Photo 5 - Butterfly"}
-  ];
+];
 
 /* Looping through images */
 for (let i = 0; i < imgArr.length; i++){
