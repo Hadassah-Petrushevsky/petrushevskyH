@@ -9,7 +9,13 @@ showHideBtn.onclick = function(){
     toggleComments();
 } 
 
-
+// Allow the button to be activated by both Enter and Space keys
+showHideBtn.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault(); // Prevent scrolling when pressing spacebar
+      toggleComments();
+    }
+  });
 
 function toggleComments(){
   let showHideText = showHideBtn.textContent;
