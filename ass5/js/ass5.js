@@ -5,7 +5,13 @@ const commentWrapper = document.querySelector('.comment-wrapper');
 
 commentWrapper.style.display = 'none';
 
-showHideBtn.onclick = function() {
+showHideBtn.onclick = function(){
+    toggleComments();
+} 
+
+
+
+function toggleComments(){
   let showHideText = showHideBtn.textContent;
   if(showHideText === 'Show comments') {
     showHideBtn.textContent = 'Hide comments';
